@@ -10,4 +10,10 @@
 
 @interface Photo : NSObject
 
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* subject;
+@property (nonatomic, strong) NSString* location;
+
+- (instancetype)initWithName: (NSString*)name andSubject: (NSString*)subject andLocation: (NSString*)location;
+
 @end

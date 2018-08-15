@@ -7,13 +7,9 @@
 //
 
 #import "PhotoCollectionViewCell.h"
-#import "Photo.h"
 
-@interface PhotoCollectionViewCell ()
-//private properties
 
-@property (nonatomic, strong) NSMutableArray<Photo*> *photos;
-@end
+
 
 @implementation PhotoCollectionViewCell
 
