@@ -35,17 +35,17 @@
 
 
 - (void) setUpPhotoGallery {
-    Photo *photo1 = [[Photo alloc] initWithName:@"Photo1" andSubject:@"Surfing" andLocation:@"Nicaragua"];
-    Photo *photo2 = [[Photo alloc] initWithName:@"Photo2" andSubject:@"Surfing" andLocation:@"Hawaii"];
-    Photo *photo3 = [[Photo alloc] initWithName:@"Photo3" andSubject:@"Surfing" andLocation:@"Nicaragua"];
-    Photo *photo4 = [[Photo alloc] initWithName:@"Photo4" andSubject:@"Drowning" andLocation:@"Hawaii"];
-    Photo *photo5 = [[Photo alloc] initWithName:@"Photo5" andSubject:@"Surfing" andLocation:@"Nicaragua"];
-    Photo *photo6 = [[Photo alloc] initWithName:@"Photo6" andSubject:@"Drowning" andLocation:@"Nicaragua"];
-    Photo *photo7 = [[Photo alloc] initWithName:@"Photo7" andSubject:@"Surfing" andLocation:@"Hawaii"];
-    Photo *photo8 = [[Photo alloc] initWithName:@"Photo8" andSubject:@"Drowning" andLocation:@"Nicaragua"];
-    Photo *photo9 = [[Photo alloc] initWithName:@"Photo9" andSubject:@"Drowning" andLocation:@"Hawaii"];
-    Photo *photo10 = [[Photo alloc] initWithName:@"Photo10" andSubject:@"Drowning" andLocation:@"Hawaii"];
-    self.photos = @[photo2, photo3, photo4,photo5, photo6, photo1,photo7, photo8, photo9,photo10];
+    Photo *photo1 = [[Photo alloc] initWithphotoName:@"Photo1" andSubject:@"Surfing" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"2d3d3bef"]];
+    Photo *photo2 = [[Photo alloc] initWithphotoName:@"Photo2" andSubject:@"Surfing" andLocation:@"Hawaii" andImage:[UIImage imageNamed:@"50a8f04ac8f5fc40ab20d6274b597844"]];
+    Photo *photo3 = [[Photo alloc] initWithphotoName:@"Photo3" andSubject:@"Surfing" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"856542_dive-surf-girl-wallpapers-hd-free-desktop-backgrounds-2016-in_4288x2848_h"]];
+    Photo *photo4 = [[Photo alloc] initWithphotoName:@"Photo4" andSubject:@"Drowning" andLocation:@"Hawaii" andImage:[UIImage imageNamed:@"FF11"]];
+    Photo *photo5 = [[Photo alloc] initWithphotoName:@"Photo5" andSubject:@"Surfing" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"Sebastian.Imizcoz.indoseb"]];
+    Photo *photo6 = [[Photo alloc] initWithphotoName:@"Photo6" andSubject:@"Drowning" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"surfgirl"]];
+    Photo *photo7 = [[Photo alloc] initWithphotoName:@"Photo7" andSubject:@"Surfing" andLocation:@"Hawaii" andImage:[UIImage imageNamed:@"tumblr_p4mlkqEO8J1sljr6oo1_500"]];
+    Photo *photo8 = [[Photo alloc] initWithphotoName:@"Photo8" andSubject:@"Drowning" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"tumblr_static_tumblr_static__640"]];
+    Photo *photo9 = [[Photo alloc] initWithphotoName:@"Photo9" andSubject:@"Drowning" andLocation:@"Hawaii" andImage:[UIImage imageNamed:@"Vans-2015-US-Open-of-Surfing_PatGudauskasn3hq"]];
+    Photo *photo10 = [[Photo alloc] initWithphotoName:@"Photo10" andSubject:@"Drowning" andLocation:@"Hawaii" andImage:[UIImage imageNamed:@"xlgPK"]];
+    self.photos = @[photo1, photo2, photo3, photo4,photo5, photo6,photo7, photo8, photo9,photo10];
 }
 //
 //
@@ -53,9 +53,9 @@
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCollectionViewCell" forIndexPath:indexPath];
     //get item in array at index
     Photo *photo = self.photos[indexPath.item];
-    cell.imageView.image = [UIImage imageNamed:photo.name];
+    cell.imageView.image = photo.image;
     //set cell image
-    cell.nameLabel.text = photo.name;
+    cell.nameLabel.text = photo.photoName;
     //set title
     //set subject
     //set location

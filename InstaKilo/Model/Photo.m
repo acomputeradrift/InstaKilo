@@ -8,6 +8,7 @@
 
 #import "Photo.h"
 
+
 @interface Photo ()
 //private properties
 
@@ -17,13 +18,14 @@
 
 @implementation Photo
 
-- (instancetype)initWithName: (NSString*)name andSubject: (NSString*)subject andLocation: (NSString*)location
+- (instancetype)initWithphotoName: (NSString*)photoName andSubject: (NSString*)subject andLocation: (NSString*)location andImage: (UIImage*)image
 {
     self = [super init];
     if (self) {
-        _name = name;
+        _photoName = photoName;
         _subject = subject;
         _location = location;
+        _image = image;
     }
     return self;
 }
