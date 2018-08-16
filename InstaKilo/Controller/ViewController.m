@@ -52,7 +52,7 @@
     Photo *photo10 = [[Photo alloc] initWithphotoName:@"Photo10" andSubject:@"Drowning" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"xlgPK"]];
     self.photosByLocation = @[@[photo1, photo2, photo3, photo4,photo5],@[ photo6,photo7, photo8, photo9,photo10]]; //2 arrays in photo by location   self.photoByLco[0][4] section item
     self.photosBySubject = @[@[photo1, photo3, photo5, photo7,photo9],@[ photo2,photo4, photo6, photo8,photo10]]; // 2 arrays
-    self.photosArray = self.photosBySubject;
+    self.photosArray = self.photosByLocation;
     
 }
 //
@@ -78,9 +78,13 @@
         header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                     withReuseIdentifier:@"PhotoCollectionReusableView"
                                                            forIndexPath:indexPath];
-        header.UILabelSectionName.text = @"Popular Tracks";
+        
+        if (self.photosArray == self.photosBySubject){
+        header.UILabelSectionName.text = self.photosArray[indexPath.section][indexPath.item].subject;
+        }else{
+        header.UILabelSectionName.text = self.photosArray[indexPath.section][indexPath.item].location;
+        }
     }
-    
     return header;
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
