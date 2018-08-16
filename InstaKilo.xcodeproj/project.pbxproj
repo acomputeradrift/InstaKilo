@@ -17,6 +17,7 @@
 		7D69D36D2124B0D200B9C73B /* InstaKiloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D69D36C2124B0D200B9C73B /* InstaKiloUITests.m */; };
 		7D69D37C2124B38700B9C73B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D69D37B2124B38700B9C73B /* Photo.m */; };
 		7D69D37F2124B49900B9C73B /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D69D37E2124B49900B9C73B /* PhotoCollectionViewCell.m */; };
+		7DAA634D2124E20B00BA582F /* PhotoCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA634C2124E20B00BA582F /* PhotoCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		7D69D37B2124B38700B9C73B /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		7D69D37D2124B49900B9C73B /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		7D69D37E2124B49900B9C73B /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		7DAA634B2124E20B00BA582F /* PhotoCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionReusableView.h; sourceTree = "<group>"; };
+		7DAA634C2124E20B00BA582F /* PhotoCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 			children = (
 				7D69D37D2124B49900B9C73B /* PhotoCollectionViewCell.h */,
 				7D69D37E2124B49900B9C73B /* PhotoCollectionViewCell.m */,
+				7DAA634B2124E20B00BA582F /* PhotoCollectionReusableView.h */,
+				7DAA634C2124E20B00BA582F /* PhotoCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				7D69D34D2124B0D000B9C73B /* ViewController.m in Sources */,
 				7D69D3582124B0D200B9C73B /* main.m in Sources */,
 				7D69D37F2124B49900B9C73B /* PhotoCollectionViewCell.m in Sources */,
+				7DAA634D2124E20B00BA582F /* PhotoCollectionReusableView.m in Sources */,
 				7D69D34A2124B0D000B9C73B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
