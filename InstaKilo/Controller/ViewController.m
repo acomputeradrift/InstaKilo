@@ -20,6 +20,13 @@
 @property (nonatomic, strong) NSArray<NSArray <Photo*> *> *photosByLocation;
 @property (nonatomic, strong) NSArray<NSArray <Photo*> *> *photosBySubject;
 @property (nonatomic, strong) NSArray<NSArray <Photo*> *> *photosArray;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *toggleControl;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *photoUICollectionView;
+
+
+
 @end
 
 
@@ -52,9 +59,19 @@
     Photo *photo10 = [[Photo alloc] initWithphotoName:@"Photo10" andSubject:@"Drowning" andLocation:@"Nicaragua" andImage:[UIImage imageNamed:@"xlgPK"]];
     self.photosByLocation = @[@[photo1, photo2, photo3, photo4,photo5],@[ photo6,photo7, photo8, photo9,photo10]]; //2 arrays in photo by location   self.photoByLco[0][4] section item
     self.photosBySubject = @[@[photo1, photo3, photo5, photo7,photo9],@[ photo2,photo4, photo6, photo8,photo10]]; // 2 arrays
-    self.photosArray = self.photosByLocation;
-    
+    self.photosArray = self.photosBySubject;
+   
 }
+- (IBAction)toggleTheSections:(UISegmentedControl *)sender {
+    if (self.toggleControl.selectedSegmentIndex == 0){
+        self.photosArray = self.photosBySubject;
+    }else{
+        self.photosArray = self.photosByLocation;
+        
+    }
+    [self.photoUICollectionView reloadData];
+}
+
 //
 //
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
